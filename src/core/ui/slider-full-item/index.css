@@ -1,0 +1,35 @@
+.slider-full-item {
+  transition-duration: 400ms;
+  flex: 0 0 auto;
+  &__container {
+    margin: 10px;
+  }
+  &__image {
+    pointer-events: none;
+    img {
+      pointer-events: none;
+    }
+  }
+  width: 92%;
+  @screen md {
+    width: 60%;
+  }
+  @screen lg {
+    width: 35%;
+  }
+  @screen xl {
+    width: 30%;
+  }
+  &:hover {
+    width: 94%;
+    @screen md {
+      width: 62%;
+    }
+    @screen lg {
+      width: 37%;
+    }
+    @screen xl {
+      width: 32%;
+    }
+  }
+}

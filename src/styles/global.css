@@ -1,0 +1,30 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@tailwind screens;
+
+:root {
+  --transparent: transparent;
+  --black: #000;
+  --white: #fff;
+  --alpha: #0f1321;
+  --beta: #0d1117;
+  --gamma: #ffd160;
+  --delta: #ef8746;
+}
+
+body.dark-mode {
+  -webkit-font-smoothing: antialiased;
+  background: linear-gradient(135deg, var(--alpha) 0%, var(--beta) 100%);
+  @apply text-white;
+  font-family: "Poppins", sans-serif;
+}
+
+::selection {
+  background: var(--alpha); /* fallback for old browsers */
+  color: white;
+}
+ 

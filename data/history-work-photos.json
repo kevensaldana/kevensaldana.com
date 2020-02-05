@@ -1,0 +1,30 @@
+[
+  {
+    "company": "Belatrix Software",
+    "time": "Julio 2019 - Actualmente",
+    "title": "Senior UI Developer",
+    "description": "Componentes ui core y negocio. Tecnologias: NGNIX, ANGULAR 7, SCSS, CDK MATERIAL, RXJS, NODE JS, GOOGLE ANALYTICS y JENKINS",
+    "image": "./companies/bela.png"
+  },
+  {
+    "company": "TCS",
+    "time": "Mayo 2017 - Junio 2019",
+    "title": "Senior UI Developer",
+    "description": "Arquitectura frontend, componentes ui core negocio, migraciones de código. Tecnologias: ANGULAR 7, VUE, IONIC 4, RXJS, NGRX, NODE JS, SCSS, GULP, ADOBE Y GOOGLE ANALYTICS",
+    "image": "./companies/tata.png"
+  },
+  {
+    "company": "Online Studio Productions ",
+    "time": "Febrero 2015 - Agosto 2016",
+    "title": "Frontend Developer",
+    "description": "Administradores web para los aplicativos móviles que se desarrollaba. Tecnologias: VUE, VUEX, COFFE SCRIPT, JADE, GULP, FIREBASE y WEBPACK",
+    "image": "./companies/onlines.png"
+  },
+  {
+    "company": "MCETS",
+    "time": "Febrero 2015 - Agosto 2016",
+    "title": "Web Developer",
+    "description": "Desarrollo tienda online, version mobile friendly del sistema ERP venta de pasajes, mantenimiento del ERP nivel frontend. Tecnologias: Jquery, CSS, GULP, BOOTSTRAP, PASARELA DE PAGO PAYU ",
+    "image": "./companies/mcets.png"
+  }
+]

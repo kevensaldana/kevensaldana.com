@@ -1,0 +1,73 @@
+{
+  "name": "kevensaldana.com",
+  "private": true,
+  "description": "Personal web page",
+  "version": "1.0.0",
+  "author": "Keven Saldaña <keven.sa17@gmail.com>",
+  "dependencies": {
+    "gatsby": "^2.17.6",
+    "gatsby-image": "^2.2.30",
+    "gatsby-plugin-google-fonts": "^1.0.1",
+    "gatsby-plugin-google-tagmanager": "^2.1.25",
+    "gatsby-plugin-manifest": "^2.2.25",
+    "gatsby-plugin-nprogress": "^2.1.19",
+    "gatsby-plugin-offline": "^3.0.17",
+    "gatsby-plugin-postcss": "^2.1.15",
+    "gatsby-plugin-react-helmet": "^3.1.13",
+    "gatsby-plugin-react-svg": "^2.1.2",
+    "gatsby-plugin-sharp": "^2.2.34",
+    "gatsby-plugin-web-font-loader": "^1.0.4",
+    "gatsby-source-filesystem": "^2.1.35",
+    "gatsby-transformer-json": "^2.2.25",
+    "gatsby-transformer-sharp": "^2.3.1",
+    "gsap": "^3.0.1",
+    "hammerjs": "^2.0.8",
+    "node-sass": "^4.13.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-helmet": "^5.2.1",
+    "scrollmagic": "^2.0.7",
+    "three": "^0.111.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.7.2",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-config-react-app": "^5.2.0",
+    "gatsby-plugin-root-import": "^2.0.5",
+    "gatsby-plugin-use-dark-mode": "^1.1.2",
+    "husky": "^4.2.1",
+    "postcss-custom-properties": "^9.0.2",
+    "postcss-import": "^12.0.1",
+    "postcss-nested": "^4.2.1",
+    "postcss-nested-ancestors": "^2.0.0",
+    "prettier": "^1.19.1",
+    "pretty-quick": "^2.0.1",
+    "tailwindcss": "^1.1.3"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged --pattern \"**/*.{js,jsx,json,md}\""
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  }
+}

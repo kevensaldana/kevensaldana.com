@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Cocos y Lucas",
+    "description": "Proyecto para promover el cambio de dólares hacia los clientes con cuentas en el mismo banco.",
+    "image": "./projects/cocoslucas.png"
+  },
+  {
+    "title": "Banca por Internet Empresas",
+    "description": "Gestión de operaciones bancarias para empresas (pagos masivos, consultas y transferencias online,\nautorizaciones, etc)",
+    "image": "./projects/companies.png"
+  },
+  {
+    "title": "Banca por Internet Personas",
+    "description": "Gestión de operaciones bancarias para personas (consulta de saldos, pagos, transferencias, operaciones\nfrecuentes, configuración de tarjetas, etc)",
+    "image": "./projects/persons.png"
+  },
+  {
+    "title": "Redcoach",
+    "description": "ERP de Ventas de tickets de buses.",
+    "image": "./projects/redcoach.png"
+  }
+]

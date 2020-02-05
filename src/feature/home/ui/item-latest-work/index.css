@@ -1,0 +1,35 @@
+.item-latest-work {
+  .overlay {
+    width: 100%;
+    height: 100%;
+    background: var(--black);
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+  }
+  .content {
+    opacity: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.49);
+    transition: all 0.2s ease-in;
+    & > div {
+      transition: all 0.2s ease-in;
+      position: relative;
+      bottom: -5px;
+    }
+  }
+  @screen md {
+    &:hover {
+      .content {
+        opacity: 1;
+        & > div {
+          position: relative;
+          bottom: 0;
+        }
+      }
+    }
+  }
+}

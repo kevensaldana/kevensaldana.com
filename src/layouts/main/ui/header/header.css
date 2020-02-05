@@ -1,0 +1,22 @@
+.header-nav {
+  transition: all 0.3s ease-in-out;
+}
+.menu {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  width: 0;
+  background: var(--black);
+  color: var(--white);
+  box-shadow: -7px 0px 25px 0px rgba(0, 0, 0, 0.75);
+  & .tap {
+    content: "";
+    height: 0;
+    width: 100%;
+    display: block;
+    position: absolute;
+    background: var(--black);
+    z-index: 100;
+    bottom: 0;
+  }
+}

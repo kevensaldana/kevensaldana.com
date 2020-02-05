@@ -1,0 +1,14 @@
+.section-latest-work {
+  &__list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  &__item {
+    @screen lg {
+      width: 48%;
+    }
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}

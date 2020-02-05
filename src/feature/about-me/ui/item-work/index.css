@@ -1,0 +1,12 @@
+.item-work {
+  /*max-width: 450px;*/
+  margin: 20px;
+  min-height: 300px;
+  &__image {
+    width: 120px;
+    pointer-events: none;
+  }
+  &__company {
+    min-height: 200px;
+  }
+}
