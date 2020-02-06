@@ -8,6 +8,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: https://registry.npmjs.org/
+      - name: Build project
+        run: npm run build
       - name: Build and tag image
         run: docker build -t "docker.pkg.github.com/$GITHUB_REPOSITORY/kevensaldana.com:latest" .
       - name: Docker login
