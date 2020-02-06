@@ -1,0 +1,18 @@
+nombre: CI
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Build and tag image
+        run: docker build -t "docker.pkg.github.com/$GITHUB_REPOSITORY/kevensaldana.com:latest" .
+      - name: Docker login
+        run: docker login docker.pkg.github.com -u $GITHUB_ACTOR -p $GITHUB_TOKEN
+        env:
+          GITHUB_TOKEN: ${{secrets.TOKEN}}
+      - name: Publish to GPR
+        run: docker push "docker.pkg.github.com/$GITHUB_REPOSITORY/kevensaldana.com:latest"
