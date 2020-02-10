@@ -1,6 +1,5 @@
 .item-work {
-  /*max-width: 450px;*/
-  margin: 20px;
+  margin: 10px 10px 30px;
   min-height: 300px;
   &__image {
     width: 120px;

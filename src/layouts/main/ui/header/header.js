@@ -71,12 +71,12 @@ const Header = () => {
           >
             Acerca de mi
           </a>
-          <a
-            className="cursor-pointer px-4"
-            onClick={() => navigateTo("/blog")}
-          >
-            Articulos
-          </a>
+          {/*<a*/}
+          {/*  className="cursor-pointer px-4"*/}
+          {/*  onClick={() => navigateTo("/blog")}*/}
+          {/*>*/}
+          {/*  Articulos*/}
+          {/*</a>*/}
         </div>
         <div className="flex flex-grow justify-end items-center md:hidden">
           <a
@@ -96,7 +96,7 @@ const Header = () => {
                 <i className="material-icons text-4xl">clear</i>
               </a>
             </div>
-            <div className="menu-items text-4xl font-medium mx-12 my-32">
+            <div className="menu-items text-3xl font-medium mx-10 my-16">
               <a
                 className="block mb-4 cursor-pointer overflow-hidden relative"
                 onClick={() => navigateTo("/")}
@@ -111,13 +111,13 @@ const Header = () => {
                 Acerca de mi <i className="material-icons">arrow_forward</i>
                 <span className="tap"></span>
               </a>
-              <a
-                className="block mb-4 cursor-pointer overflow-hidden relative "
-                onClick={() => navigateTo("/blog")}
-              >
-                Articulos <i className="material-icons">arrow_forward</i>{" "}
-                <span className="tap"></span>
-              </a>
+              {/*<a*/}
+              {/*  className="block mb-4 cursor-pointer overflow-hidden relative "*/}
+              {/*  onClick={() => navigateTo("/blog")}*/}
+              {/*>*/}
+              {/*  Articulos <i className="material-icons">arrow_forward</i>{" "}*/}
+              {/*  <span className="tap"></span>*/}
+              {/*</a>*/}
             </div>
           </div>
         </div>

@@ -1,13 +1,4 @@
 .item-latest-work {
-  .overlay {
-    width: 100%;
-    height: 100%;
-    background: var(--black);
-    position: absolute;
-    z-index: 1;
-    left: 0;
-    top: 0;
-  }
   .content {
     opacity: 0;
     top: 0;

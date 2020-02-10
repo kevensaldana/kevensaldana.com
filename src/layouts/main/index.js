@@ -14,7 +14,7 @@ const MainLayout = ({ children }) => {
     <ScrollContext.Provider value={context}>
       <Header />
       {children}
-      {/*<GetInTouch />*/}
+      <GetInTouch />
     </ScrollContext.Provider>
   )
 }

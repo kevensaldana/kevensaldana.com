@@ -2,18 +2,15 @@ const tailwind = require("tailwindcss")
 
 module.exports = {
   siteMetadata: {
-    title: `Keven Saldaña  - frontend developer`,
-    description: `My name is Keven. I work as software enginner at Globant. I like to program and I am always willing to learn new things.`,
-    author: `@kevenlab`,
+    title: `Keven Saldaña`,
+    description: `My name is Keven. I work as software enginner at Belatrix. I like to program and I am always willing to learn new things.`,
+    author: `keven.sa17@gmail.com`,
   },
   plugins: [
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          `material icons`,
-          `Poppins\:300,400,500,700,800,900`, // you can also specify font weights and styles
-        ],
+        fonts: [`material icons`, `Poppins\:300,400,500,700,800,900`],
         display: "swap",
       },
     },
@@ -51,15 +48,6 @@ module.exports = {
         styles: `${__dirname}/src/styles`,
       },
     },
-    {
-      resolve: "gatsby-plugin-use-dark-mode",
-      options: {
-        classNameDark: "dark-mode",
-        classNameLight: "light-mode",
-        storageKey: "darkMode",
-        minify: true,
-      },
-    },
     // {
     //   resolve: `gatsby-source-filesystem`,
     //   options: {
@@ -93,10 +81,7 @@ module.exports = {
       resolve: "gatsby-plugin-google-tagmanager",
       options: {
         id: "GTM-54M4BNH",
-
-        // Include GTM in development.
-        // Defaults to false meaning GTM will only be loaded in production.
-        includeInDevelopment: true,
+        includeInDevelopment: false,
 
         // datalayer to be set before GTM is loaded
         // should be an object or a function that is executed in the browser

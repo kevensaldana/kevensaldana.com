@@ -34,13 +34,13 @@ const LatestWork = () => {
   }, [])
 
   return (
-    <section className="section-latest-work py-20">
+    <section className="section-latest-work pt-20 md:py-20">
       <div className="container">
         <h2 ref={element} className=" text-2xl font-medium mb-8 opacity-0">
           {" "}
           Ultimos Proyectos
         </h2>
-        <div className="section-latest-work__list pb-8">
+        <div className="section-latest-work__list md:pb-8">
           {nodes.map((item, index) => {
             return (
               <div key={index} className="section-latest-work__item ">

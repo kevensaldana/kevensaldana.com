@@ -42,13 +42,13 @@ const Biography = () => {
             proyectos y conocer buenos amigos.
           </h2>
         </div>
+        <div className="mb-8 mt-8 lg:mt-16">
+          <SliderWork />
+        </div>
       </div>
-      <div className="mb-8 mt-8 lg:mt-16">
-        <SliderWork />
-      </div>
-      <div className="mb-12">
-        <SliderFullPhotos />
-      </div>
+      {/*<div className="mb-12">*/}
+      {/*  <SliderFullPhotos />*/}
+      {/*</div>*/}
     </section>
   )
 }
