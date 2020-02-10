@@ -33,4 +33,4 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
-          script: cd traefik-website/ && docker-compose up -d webpage
+          script: cd traefik-website/ && docker-compose pull webpage && docker-compose up -d webpage
