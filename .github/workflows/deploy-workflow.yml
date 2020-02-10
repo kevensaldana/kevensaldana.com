@@ -25,6 +25,7 @@ jobs:
         run: docker push "docker.pkg.github.com/$GITHUB_REPOSITORY/kevensaldana.com:latest"
   deploy:
     runs-on: ubuntu-latest
+    needs: build
     steps:
       - name: Deploy Project
         uses: appleboy/ssh-action@master
