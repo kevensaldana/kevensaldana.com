@@ -23,3 +23,13 @@ jobs:
           GITHUB_TOKEN: ${{secrets.TOKEN}}
       - name: Publish to GPR
         run: docker push "docker.pkg.github.com/$GITHUB_REPOSITORY/kevensaldana.com:latest"
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy Project
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          script: ~/traefik-website/deploy_web.sh
