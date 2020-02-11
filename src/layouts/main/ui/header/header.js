@@ -65,12 +65,12 @@ const Header = () => {
           </Link>
         </div>
         <div className="hidden md:flex flex-grow justify-end items-center ">
-          <a
-            className="cursor-pointer  px-4"
-            onClick={() => navigateTo("/about-me")}
-          >
-            Acerca de mi
-          </a>
+          {/*<a*/}
+          {/*  className="cursor-pointer  px-4"*/}
+          {/*  onClick={() => navigateTo("/about-me")}*/}
+          {/*>*/}
+          {/*  Acerca de mi*/}
+          {/*</a>*/}
           {/*<a*/}
           {/*  className="cursor-pointer px-4"*/}
           {/*  onClick={() => navigateTo("/blog")}*/}
@@ -102,13 +102,6 @@ const Header = () => {
                 onClick={() => navigateTo("/")}
               >
                 Home <i className="material-icons">arrow_forward</i>
-                <span className="tap"></span>
-              </a>
-              <a
-                className="block mb-4 cursor-pointer overflow-hidden relative"
-                onClick={() => navigateTo("/about-me")}
-              >
-                Acerca de mi <i className="material-icons">arrow_forward</i>
                 <span className="tap"></span>
               </a>
               {/*<a*/}

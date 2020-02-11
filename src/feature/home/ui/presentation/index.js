@@ -25,7 +25,7 @@ const Presentation = () => {
         <div className="overflow-hidden relative">
           <h1
             ref={sectionPresentationTitle}
-            className="section-index__title  lg:text-4xl  text-3xl font-medium mb-1 opacity-0"
+            className="section-index__title  lg:text-5xl  text-4xl font-medium mb-1 opacity-0"
           >
             {" "}
             <span className="wave">👋🏻</span> <br />
@@ -42,7 +42,9 @@ const Presentation = () => {
             ref={sectionPresentationSubTitle}
             className="section-index__subtitle text-xl mb-1 font-light text-gray-400 opacity-0"
           >
-            Actualmente trabajo como UI Developer en Belatrix Software
+            Desarrollador web peruano. Estudié Ciencias de la Computación en la
+            Universidad Nacional de Trujillo. <br /> Inicie este sitio como
+            lugar para documentar todo lo que he aprendido en mi carrera.
           </p>
         </div>
       </div>
