@@ -31,10 +31,10 @@ const Presentation = () => {
             <span className="wave">👋🏻</span> <br />
             Hola! Soy Keven,{" "}
             <span className="text-gamma inline-block">
-              desarrollador y investigador
+              desarrollador e investigador
             </span>{" "}
             <br />
-            con experiencia en: 🏦, 🚎 y 📦.
+            con experiencia en: 🏦, 🚎 y comercio.
           </h1>
         </div>
         <div className="overflow-hidden relative">

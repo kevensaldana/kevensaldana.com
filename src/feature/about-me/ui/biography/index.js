@@ -28,7 +28,7 @@ const Biography = () => {
             className="lg:text-4xl text-3xl font-medium mb-3 opacity-0"
           >
             {" "}
-            Un poco de <span className="text-gamma">mi</span>
+            Acerca de <span className="text-gamma">mi</span>
           </h1>
         </div>
         <div className="overflow-hidden relative">
@@ -36,10 +36,10 @@ const Biography = () => {
             ref={sectionPresentationSubTitle}
             className="text-lg sm:text-xl mb-4 text-gray-400 opacity-0"
           >
-            Peruano, estudié Ciencias de la Computación en la Universidad
-            Nacional de Trujillo. <br /> Me centré en el desarrollo frontend sin
-            querer, el cual me dio la oportunidad de trabajar en grandes
-            proyectos y conocer buenos amigos.
+            Soy Keven Saldaña, desarrollador web peruano. Estudié Ciencias de la
+            Computación en la Universidad Nacional de Trujillo. Inicie este
+            sitio como lugar para documentar todo lo que he aprendido en mi
+            carrera.
           </h2>
         </div>
         <div className="mb-8 mt-8 lg:mt-16">
