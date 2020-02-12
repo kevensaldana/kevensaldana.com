@@ -38,7 +38,7 @@ const LatestWork = () => {
       <div className="container">
         <h2 ref={element} className=" text-2xl font-medium mb-8 opacity-0">
           {" "}
-          Ultimos Proyectos
+          Hice equipo en los proyectos:
         </h2>
         <div className="section-latest-work__list md:pb-8">
           {nodes.map((item, index) => {

@@ -1,7 +1,7 @@
 [
   {
     "title": "Cocos y Lucas",
-    "description": "Web gratuita donde cambiar dólares en el Perú con el respaldo del BCP para brindar mayor seguridad.",
+    "description": "Web gratuita donde cambiar dólares en el Perú con el respaldo del banco para brindar mayor seguridad.",
     "image": "./projects/cocoslucas.png"
   },
   {
@@ -15,7 +15,7 @@
     "image": "./projects/persons.png"
   },
   {
-    "title": "Redcoach",
+    "title": "Compra de tickets",
     "description": "Pasarela para comprar tickets de buses en USA.",
     "image": "./projects/redcoach.png"
   }
