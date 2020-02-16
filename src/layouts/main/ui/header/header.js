@@ -68,6 +68,14 @@ const Header = () => {
             <img width="115" src={Logo} alt="Logo" />
           </Link>
         </div>
+        <div className="hidden md:flex flex-grow justify-end items-center ">
+          <a
+            className="cursor-pointer px-4"
+            onClick={() => navigateTo("/articles")}
+          >
+            Articulos
+          </a>
+        </div>
         <div className="flex flex-grow justify-end items-center md:hidden">
           <a
             onClick={openMenu}
@@ -92,6 +100,13 @@ const Header = () => {
                 onClick={() => navigateTo("/")}
               >
                 Home <i className="material-icons">arrow_forward</i>
+                <span className="tap"></span>
+              </a>
+              <a
+                className="block mb-4 cursor-pointer overflow-hidden relative"
+                onClick={() => navigateTo("/articles")}
+              >
+                Articles <i className="material-icons">arrow_forward</i>
                 <span className="tap"></span>
               </a>
             </div>

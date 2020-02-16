@@ -16,6 +16,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-mdx`,
     {
       resolve: `gatsby-plugin-nprogress`,
     },
@@ -54,6 +55,13 @@ module.exports = {
       options: {
         name: `data`,
         path: `${__dirname}/data`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages`,
       },
     },
     "gatsby-transformer-json",

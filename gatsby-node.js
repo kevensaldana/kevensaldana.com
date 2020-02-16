@@ -1,19 +1,10 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+const path = require("path")
 
-// You can delete this file if you're not using it
 exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
   if (stage === "build-html") {
     actions.setWebpackConfig({
       module: {
         rules: [
-          {
-            test: /scrollmagic/,
-            use: loaders.null(),
-          },
           {
             test: /hammerjs/,
             use: loaders.null(),
@@ -22,4 +13,39 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
       },
     })
   }
+}
+
+exports.createPages = async ({ graphql, actions, reporter }) => {
+  const { createPage } = actions
+
+  const result = await graphql(`
+    query {
+      allMdx {
+        edges {
+          node {
+            frontmatter {
+              path
+              title
+              date
+            }
+            id
+          }
+        }
+      }
+    }
+  `)
+
+  if (result.errors) {
+    reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query')
+  }
+
+  const posts = result.data.allMdx.edges
+
+  posts.forEach(({ node }, index) => {
+    createPage({
+      path: "/articles" + node.frontmatter.path,
+      component: path.resolve(`./src/layouts/post/index.js`),
+      context: { id: node.id },
+    })
+  })
 }

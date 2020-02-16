@@ -28,6 +28,14 @@ body {
   color: white;
 }
 
+#___gatsby {
+  & > div {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+}
+
 .overlay {
   width: 100%;
   height: 100%;
