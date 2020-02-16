@@ -1,4 +1,7 @@
 .item-latest-work {
+  .gatsby-image-wrapper {
+    opacity: 0;
+  }
   .content {
     opacity: 0;
     top: 0;

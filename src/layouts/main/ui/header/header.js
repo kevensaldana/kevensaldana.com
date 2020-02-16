@@ -1,37 +1,41 @@
-import PropTypes from "prop-types"
-import React, { useState, useRef } from "react"
-import Logo from "data/brand/logo.svg"
+import React, { useState } from "react"
+import Logo from "data/site/images/brand/logo-white.png"
 import "./header.css"
 import gsap from "gsap"
 import { Link, navigate } from "gatsby"
 
 const Header = () => {
   const [isOpen, setOpen] = useState(false)
-  const ref = useRef(null)
+  const elements = {
+    menu: ".menu",
+    linksMenu: ".menu-items a",
+    btnClose: ".menu .btn-close",
+    coverLinks: ".menu .tap",
+  }
 
   function openMenu() {
     setOpen(true)
     let tl = gsap.timeline()
-    gsap.set(".menu", { right: 0 })
-    gsap.set(".menu-items a", { opacity: 0, x: 50 })
-    gsap.set(".menu .btn-close", { opacity: 1 })
-    tl.to(".menu", {
+    gsap.set(elements.menu, { right: 0 })
+    gsap.set(elements.linksMenu, { opacity: 0, x: 50 })
+    gsap.set(elements.btnClose, { opacity: 1 })
+    tl.to(elements.menu, {
       duration: 0.2,
       width: "100%",
       ease: "expo.in",
-    }).to(".menu-items a", {
+    }).to(elements.linksMenu, {
       duration: 0.4,
       opacity: 1,
       stagger: 0.3,
       x: 0,
-      ease: "ease",
+      ease: "expo.in",
     })
   }
 
   function closeMenu() {
     let tl = gsap.timeline()
-    gsap.set(".menu .menu-items a", { opacity: 0 })
-    tl.to(".menu", {
+    gsap.set(elements.linksMenu, { opacity: 0 })
+    tl.to(elements.menu, {
       duration: 0.4,
       width: "0",
       ease: "expo.out",
@@ -42,41 +46,27 @@ const Header = () => {
 
   function navigateTo(to) {
     let tl = gsap.timeline()
-    gsap.set(".menu .btn-close", { opacity: 0 })
-    tl.to(".menu .tap", { duration: 0.5, height: "100%" })
-      .to(".menu", {
+    gsap.set(elements.btnClose, { opacity: 0 })
+    tl.to(elements.coverLinks, { duration: 0.5, height: "100%" })
+      .to(elements.menu, {
         left: 0,
         duration: 0.5,
         width: "0",
         ease: "expo.out",
         clearProps: "left",
       })
-      .to(".menu .tap", { height: "0" })
+      .to(elements.coverLinks, { height: "0" })
 
     navigate(to)
   }
 
   return (
-    <nav ref={ref} className={`header-nav top-0 py-8`}>
+    <nav className={`header-nav top-0 py-8`}>
       <div className="px-6 container flex items-center justify-between">
         <div className="flex items-center flex-grow mr-6">
           <Link to="/">
-            <Logo />
+            <img width="115" src={Logo} alt="Logo" />
           </Link>
-        </div>
-        <div className="hidden md:flex flex-grow justify-end items-center ">
-          {/*<a*/}
-          {/*  className="cursor-pointer  px-4"*/}
-          {/*  onClick={() => navigateTo("/about-me")}*/}
-          {/*>*/}
-          {/*  Acerca de mi*/}
-          {/*</a>*/}
-          {/*<a*/}
-          {/*  className="cursor-pointer px-4"*/}
-          {/*  onClick={() => navigateTo("/blog")}*/}
-          {/*>*/}
-          {/*  Articulos*/}
-          {/*</a>*/}
         </div>
         <div className="flex flex-grow justify-end items-center md:hidden">
           <a
@@ -104,27 +94,12 @@ const Header = () => {
                 Home <i className="material-icons">arrow_forward</i>
                 <span className="tap"></span>
               </a>
-              {/*<a*/}
-              {/*  className="block mb-4 cursor-pointer overflow-hidden relative "*/}
-              {/*  onClick={() => navigateTo("/blog")}*/}
-              {/*>*/}
-              {/*  Articulos <i className="material-icons">arrow_forward</i>{" "}*/}
-              {/*  <span className="tap"></span>*/}
-              {/*</a>*/}
             </div>
           </div>
         </div>
       </div>
     </nav>
   )
-}
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
 }
 
 export default Header

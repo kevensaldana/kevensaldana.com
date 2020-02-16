@@ -1,23 +1,27 @@
-import React, { useEffect, useRef } from "react"
+import React, { useRef } from "react"
 import gsap from "gsap"
 import "./index.css"
+import useIntersectionObserver from "core/infrastructure/use-intersection-observer"
 
 const Presentation = () => {
   const sectionPresentationTitle = useRef(null)
   const sectionPresentationSubTitle = useRef(null)
 
-  useEffect(() => {
-    const tl = gsap.timeline()
-    tl.fromTo(
-      sectionPresentationTitle.current,
-      { opacity: 0, y: 156 },
-      { duration: 0.6, y: 0, opacity: 1, ease: "power2.easeIn" }
-    ).fromTo(
-      sectionPresentationSubTitle.current,
-      { opacity: 0 },
-      { duration: 0.5, opacity: 1 }
-    )
-  }, [])
+  useIntersectionObserver({
+    refs: [sectionPresentationTitle],
+    callback: () => {
+      gsap.fromTo(
+        sectionPresentationTitle.current,
+        { y: 200, opacity: 0 },
+        { duration: 0.6, y: 0, opacity: 1, ease: "power2.easeIn" }
+      )
+      gsap.fromTo(
+        sectionPresentationSubTitle.current,
+        { y: 200, opacity: 0 },
+        { duration: 0.5, y: 0, opacity: 1, ease: "power2.easeIn" }
+      )
+    },
+  })
 
   return (
     <section className="section-index relative pt-8 lg:pt-24">
@@ -27,10 +31,9 @@ const Presentation = () => {
             ref={sectionPresentationTitle}
             className="section-index__title  lg:text-5xl  text-4xl font-medium mb-1 opacity-0"
           >
-            {" "}
             <span className="wave">👋🏻</span> <br />
-            Hola! Soy Keven,{" "}
-            <span className="text-gamma inline-block">desarrollador</span>{" "}
+            Hola! Soy Keven,
+            <span className="text-gamma inline-block">desarrollador</span>
             <br />
             con experiencia en: 🏦, 🚎 y comercio.
           </h1>

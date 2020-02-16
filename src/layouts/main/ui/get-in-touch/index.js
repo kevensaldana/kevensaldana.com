@@ -1,38 +1,30 @@
 import React from "react"
+import configSite from "data/site/config"
 
 const Index = () => {
+  const networks = configSite.social.networks
+
   return (
     <section className="py-10  md:pb-20  text-white ">
       <div className="container">
         <div className="md:flex">
           <div className="md:w-1/3 text-center md:text-left font-light text-gray-500 text-sm md:text-lg">
-            @ Keven Saldaña | {new Date().getFullYear()}
+            @ {configSite.author} | {new Date().getFullYear()}
           </div>
           <div className="md:w-2/3 text-right font-bold text-gray-500 mt-3 md:mt-0">
-            <a
-              href="mailto:keven.sa17@gmail.com?subject=Hi"
-              className="px-3 block text-center md:inline-block"
-            >
-              Email
-            </a>
-            <a
-              href="https://www.instagram.com/kevengsa/"
-              className=" px-3 block text-center md:inline-block"
-            >
-              Instagram
-            </a>
-            <a
-              href="https://twitter.com/kevsa17"
-              className=" px-3 block text-center md:inline-block"
-            >
-              Twitter
-            </a>
-            <a
-              href="https://www.linkedin.com/in/kevengsa/"
-              className=" px-3 block text-center md:inline-block"
-            >
-              Linkedin
-            </a>
+            {networks.map((item, index) => {
+              return (
+                <a
+                  key={index}
+                  href={item.src}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-3 block text-center md:inline-block"
+                >
+                  {item.name}
+                </a>
+              )
+            })}
           </div>
         </div>
       </div>

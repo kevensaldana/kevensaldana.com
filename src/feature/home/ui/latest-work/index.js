@@ -1,45 +1,34 @@
-import React, { useEffect, useRef } from "react"
-import { graphql, useStaticQuery } from "gatsby"
+import React, { useRef } from "react"
 import gsap from "gsap"
+import useIntersectionObserver from "core/infrastructure/use-intersection-observer"
 
-import "./index.css"
 import ItemLatestWork from "../item-latest-work"
+import useProjectsHook from "../../application/use-projects.hook"
+import "./index.css"
 
 const LatestWork = () => {
   const element = useRef(null)
+  const nodes = useProjectsHook()
 
-  const {
-    allLatestWorkJson: { nodes },
-  } = useStaticQuery(graphql`
-    query {
-      allLatestWorkJson {
-        nodes {
-          title
-          description
-          image {
-            childImageSharp {
-              fluid {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-        }
-      }
-    }
-  `)
-
-  useEffect(() => {
-    const { current } = element
-    gsap.fromTo(current, 0.7, { opacity: 0 }, { opacity: 1, delay: 0.9 })
-  }, [])
+  useIntersectionObserver({
+    refs: [element],
+    callback: props => {
+      gsap.fromTo(
+        props.target,
+        { y: 100, opacity: 0 },
+        { duration: 0.3, y: 0, opacity: 1, ease: "power2.easeIn" }
+      )
+    },
+  })
 
   return (
     <section className="section-latest-work pt-20 md:py-20">
       <div className="container">
-        <h2 ref={element} className=" text-2xl font-medium mb-8 opacity-0">
-          {" "}
-          Hice equipo en los proyectos:
-        </h2>
+        <div className="overflow-hidden relative">
+          <h2 ref={element} className=" text-2xl font-medium mb-8 opacity-0">
+            Forme parte de los proyectos:
+          </h2>
+        </div>
         <div className="section-latest-work__list md:pb-8">
           {nodes.map((item, index) => {
             return (

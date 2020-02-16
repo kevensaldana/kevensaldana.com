@@ -2,21 +2,21 @@
   {
     "title": "Cocos y Lucas",
     "description": "Web gratuita donde cambiar dólares en el Perú con el respaldo del banco para brindar mayor seguridad.",
-    "image": "./projects/cocoslucas.png"
+    "image": "./images/projects/cocoslucas.png"
   },
   {
     "title": "Banca por Internet Empresas",
     "description": "Web para la gestión de operaciones bancarias para empresas (pagos masivos, consultas y transferencias online,\nautorizaciones, etc).",
-    "image": "./projects/companies.png"
+    "image": "./images/projects/companies.png"
   },
   {
     "title": "Banca por Internet Personas",
     "description": "Web para la gestión de operaciones bancarias para personas (consulta de saldos, pagos, transferencias, operaciones\nfrecuentes, configuración de tarjetas, etc).",
-    "image": "./projects/persons.png"
+    "image": "./images/projects/persons.png"
   },
   {
     "title": "Compra de tickets",
     "description": "Pasarela para comprar tickets de buses en USA.",
-    "image": "./projects/redcoach.png"
+    "image": "./images/projects/redcoach.png"
   }
 ]

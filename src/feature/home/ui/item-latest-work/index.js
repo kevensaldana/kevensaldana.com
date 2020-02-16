@@ -1,31 +1,56 @@
-import React, { useEffect, useRef } from "react"
+import React, { useRef } from "react"
 import Img from "gatsby-image"
 import PropTypes from "prop-types"
 import gsap from "gsap"
+import useIntersectionObserver from "core/infrastructure/use-intersection-observer"
+import classesGatsby from "core/domain/classes-gatbsy"
 
 import "./index.css"
 
 const ItemLatestWork = ({ img, title, description }) => {
   const element = useRef(null)
   const overlay = useRef(null)
-  const imageRef = useRef(null)
+  const contentHideRef = useRef(null)
 
-  useEffect(() => {
-    const tl = gsap.timeline()
-    const imageWrapper = element.current.querySelector(".gatsby-image-wrapper")
-    tl.set(imageWrapper, { opacity: 0 })
-    tl.from(overlay.current, { scaleX: 0, transformOrigin: "left", delay: 1 })
-      .to(overlay.current, 0.8, { scaleX: 0, transformOrigin: "right" })
-      .to(imageWrapper, { opacity: 1 }, "-=0.8")
-  }, [])
+  useIntersectionObserver({
+    refs: [element],
+    callback: () => {
+      const imageWrapper = element.current.querySelector(
+        classesGatsby.wrapperImage
+      )
+      const tl = gsap.timeline()
+      tl.fromTo(
+        overlay.current,
+        { scaleX: 1, transformOrigin: "left" },
+        {
+          scaleX: 0,
+          transformOrigin: "right",
+          duration: 0.5,
+          ease: "power2.easeIn",
+        }
+      ).to(imageWrapper, { opacity: 1 }, "-=0.5")
+
+      gsap.fromTo(
+        contentHideRef.current,
+        { y: 100, opacity: 0 },
+        { duration: 0.3, y: 0, opacity: 1, ease: "power2.easeIn" }
+      )
+    },
+  })
 
   return (
-    <div>
-      <h2 className="text-xl font-medium mb-4 relative md:hidden">{title}</h2>
-      <p className="mb-6 text-gray-500 md:hidden">{description}</p>
-      <div ref={element} className="relative item-latest-work ">
+    <div className="item-latest-work">
+      <div className="overflow-hidden relative">
+        <div ref={contentHideRef} className="opacity-0">
+          <h2 className="text-xl font-medium mb-4 relative md:hidden">
+            {title}
+          </h2>
+          <p className="mb-6 text-gray-500 md:hidden">{description}</p>
+        </div>
+      </div>
+      <div ref={element} className="relative">
         <div ref={overlay} className="overlay" />
-        <Img ref={imageRef} fluid={img} />
+        <Img fluid={img} />
         <div className="absolute content">
           <div className="flex flex-col justify-center h-full text-center px-5 lg:px-20">
             <h2 className="text-3xl font-medium mb-1 relative">{title}</h2>

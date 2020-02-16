@@ -27,6 +27,7 @@
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-helmet": "^5.2.1",
+    "react-intersection-observer": "^8.25.2",
     "scrollmagic": "^2.0.7",
     "three": "^0.111.0"
   },
