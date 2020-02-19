@@ -2,6 +2,7 @@ import React, { useRef } from "react"
 import gsap from "gsap"
 import "./index.css"
 import useIntersectionObserver from "core/infrastructure/use-intersection-observer"
+import Social from "core/ui/social"
 
 const Presentation = () => {
   const sectionPresentationTitle = useRef(null)
@@ -43,10 +44,11 @@ const Presentation = () => {
             ref={sectionPresentationSubTitle}
             className="section-index__subtitle text-xl mb-1 font-light text-gray-400 opacity-0"
           >
-            Desarrollador web peruano. Estudié Ciencias de la Computación en la
-            Universidad Nacional de Trujillo. <br /> Inicie este sitio como
+            Desarrollador web peruano que estudió ciencias de la computación en
+            la Universidad Nacional de Trujillo. <br /> Inicie este sitio como
             lugar para documentar todo lo que he aprendido en mi carrera.
           </p>
+          <Social className="mt-8" />
         </div>
       </div>
     </section>

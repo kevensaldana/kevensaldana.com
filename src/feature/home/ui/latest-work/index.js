@@ -25,7 +25,7 @@ const LatestWork = () => {
     <section className="section-latest-work pt-20 md:py-20">
       <div className="container">
         <div className="overflow-hidden relative">
-          <h2 ref={element} className=" text-2xl font-medium mb-8 opacity-0">
+          <h2 ref={element} className=" text-3xl font-medium mb-8 opacity-0">
             Forme parte de los proyectos:
           </h2>
         </div>
