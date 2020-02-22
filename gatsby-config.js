@@ -9,6 +9,47 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-source-github-api`,
+      options: {
+        url: `https://api.github.com/graphql`,
+        token: process.env.GATSBY_API_URL,
+        graphQLQuery: `
+        query GetRepos {
+          viewer {
+            name
+            repositories(last: 10) {
+              nodes {
+                name
+                isPrivate
+                isFork
+                stargazers(last: 10) {
+                  totalCount
+                }
+                homepageUrl
+                description
+                languages(first: 1) {
+                  nodes {
+                    name
+                    id
+                    color
+                  }
+                }
+                repositoryTopics(last: 10) {
+                  nodes {
+                    topic {
+                      name
+                    }
+                  }
+                }
+              }
+            }
+            location
+          }
+        }
+        `,
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: config.fonts,
