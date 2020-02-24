@@ -53,8 +53,8 @@ const ItemLatestWork = ({ img, title, description }) => {
         <Img fluid={img} />
         <div className="absolute content">
           <div className="flex flex-col justify-center h-full text-center px-5 lg:px-20">
-            <h2 className="text-3xl font-medium mb-1 relative">{title}</h2>
-            <p className="text-xl mb-6">{description}</p>
+            <h2 className="text-2xl font-medium mb-1 relative">{title}</h2>
+            <p className="text-lg mb-6">{description}</p>
           </div>
         </div>
       </div>

@@ -26,8 +26,8 @@ const Social = ({ className }) => {
         ref={element}
         className={`opacity-0 flex social-networks text-sm font-bold items-center ${className}`}
       >
-        <img width="60" src={Me} alt="Logo" />
-        <div className="ml-5">
+        <img width="50" src={Me} alt="Logo" />
+        <div className="ml-3">
           {networks.map((item, index) => {
             return (
               <a
@@ -35,7 +35,7 @@ const Social = ({ className }) => {
                 href={item.src}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block text-center text-gray-500 hover:text-gamma"
+                className="inline-block text-center text-gray-500 hover:text-gamma pr-2"
               >
                 {item.name}
               </a>

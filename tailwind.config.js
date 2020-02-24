@@ -10,7 +10,7 @@ module.exports = {
     screens: {
       sm: "640px",
       md: "768px",
-      lg: "1152px",
+      lg: "1250px",
       xl: "1530px",
     },
     colors: {
@@ -21,6 +21,7 @@ module.exports = {
       beta: "#0d1117",
       gamma: "var(--gamma)",
       delta: "var(--delta)",
+      dseta: "var(--dseta)",
       // epsilon: "",
       // zeta: "",
       // eta: "",

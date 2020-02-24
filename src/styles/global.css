@@ -15,11 +15,12 @@
   --gamma: #ffd160;
   --delta: #ef8746;
   --epsilon: #ea5d30;
+  --dseta: #161627;
 }
 
 body {
   -webkit-font-smoothing: antialiased;
-  background: linear-gradient(135deg, var(--alpha) 0%, var(--beta) 100%);
+  background: var(--alpha);
   @apply text-white;
   font-family: "Poppins", sans-serif;
 }
@@ -45,4 +46,11 @@ body {
   z-index: 1;
   left: 0;
   top: 0;
+}
+
+.gradient-y-night-transparent {
+  background: linear-gradient(0deg, rgba(21, 21, 21, 0), var(--alpha));
+}
+.gradient-y-transparent-night {
+  background: linear-gradient(180deg, rgba(21, 21, 21, 0), var(--alpha));
 }

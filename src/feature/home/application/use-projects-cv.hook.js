@@ -1,6 +1,6 @@
 import { graphql, useStaticQuery } from "gatsby"
 
-export default function useProjectsHook() {
+export default function useProjectsCvHook() {
   const {
     allProjectsJson: { nodes },
   } = useStaticQuery(graphql`

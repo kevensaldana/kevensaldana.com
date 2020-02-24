@@ -1,0 +1,9 @@
+.item-post {
+  max-width: 326px;
+  &__tags {
+    list-style: none;
+    li {
+      display: inline-block;
+    }
+  }
+}

@@ -1,16 +1,13 @@
 import React from "react"
-import Home from "feature/home"
 import { graphql } from "gatsby"
-import usePostsHook from "../core/application/use-posts.hook"
 
-const IndexPage = ({ data }) => {
-  const posts = usePostsHook(data.allMdx.nodes)
-  console.log("posts", posts)
-  return <Home posts={posts} />
+export default function PageTemplate({ data }) {
+  console.log("data", data)
+  return <div className="container"></div>
 }
 
 export const pageQuery = graphql`
-  query MyQuery1($tag: String = "learning") {
+  query MyQuery($tag: String = "learning") {
     allMdx(filter: { frontmatter: { tags: { in: [$tag] } } }) {
       nodes {
         frontmatter {
@@ -23,7 +20,7 @@ export const pageQuery = graphql`
             base
             childImageSharp {
               fluid {
-                ...GatsbyImageSharpFluid
+                base64
               }
             }
           }
@@ -32,5 +29,3 @@ export const pageQuery = graphql`
     }
   }
 `
-
-export default IndexPage
