@@ -9,6 +9,7 @@ module.exports = {
     title: config.title,
     description: config.description,
     author: config.title,
+    lang: config.lang,
   },
   plugins: [
     {
@@ -20,7 +21,7 @@ module.exports = {
         query GetRepos {
           viewer {
             name
-            repositories(last: 10) {
+            repositories(last: 10, privacy: PUBLIC) {
               nodes {
                 name
                 isPrivate
@@ -44,6 +45,7 @@ module.exports = {
                     }
                   }
                 }
+                url
               }
             }
             location
@@ -59,6 +61,7 @@ module.exports = {
         display: "swap",
       },
     },
+    "gatsby-remark-reading-time",
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-mdx`,
     {
@@ -115,6 +118,13 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              aliases: { sh: "bash", js: "javascript" },
+              showLineNumbers: true,
+            },
+          },
           {
             resolve: `gatsby-remark-images`,
             options: {

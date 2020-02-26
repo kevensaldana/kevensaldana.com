@@ -1,22 +1,22 @@
 [
   {
     "title": "Cocos y Lucas",
-    "description": "Web gratuita donde cambiar dólares en el Perú con el respaldo del banco para brindar mayor seguridad.",
+    "description": "Website to change dollars in Peru with a bank support to provide greater security.",
     "image": "./images/projects/cocoslucas.png"
   },
   {
-    "title": "Banca por Internet Empresas",
-    "description": "Web para la gestión de operaciones bancarias para empresas (pagos masivos, consultas y transferencias online,\nautorizaciones, etc).",
+    "title": "Internet Banking Companies",
+    "description": "Banking operations for companies (mass payments, balance inquiries and online transfers, authorizations, etc).",
     "image": "./images/projects/companies.png"
   },
   {
-    "title": "Banca por Internet Personas",
-    "description": "Web para la gestión de operaciones bancarias para personas (consulta de saldos, pagos, transferencias, operaciones\nfrecuentes, configuración de tarjetas, etc).",
+    "title": "Internet Banking People\n",
+    "description": "Banking operations for people (balance inquiries , payments, transfers, frequent operations, cards configuration, etc).",
     "image": "./images/projects/persons.png"
   },
   {
-    "title": "Compra de tickets",
-    "description": "Pasarela para comprar tickets de buses en USA.",
+    "title": "Shopping cart for transport",
+    "description": "Shopping cart to sale bus tickets (mobile friendly)",
     "image": "./images/projects/redcoach.png"
   }
 ]

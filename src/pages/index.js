@@ -5,7 +5,6 @@ import usePostsHook from "../core/application/use-posts.hook"
 
 const IndexPage = ({ data }) => {
   const posts = usePostsHook(data.allMdx.nodes)
-  console.log("posts", posts)
   return <Home posts={posts} />
 }
 
@@ -13,8 +12,9 @@ export const pageQuery = graphql`
   query MyQuery1($tag: String = "learning") {
     allMdx(filter: { frontmatter: { tags: { in: [$tag] } } }) {
       nodes {
+        timeToRead
         frontmatter {
-          date
+          date(formatString: "MMMM DD, YYYY")
           path
           title
           tags

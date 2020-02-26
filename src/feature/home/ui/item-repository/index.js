@@ -2,22 +2,38 @@ import React from "react"
 import "./index.css"
 import PropTypes from "prop-types"
 
-const ItemRepository = ({ language, title, description, stars, web }) => {
+const ItemRepository = ({
+  language,
+  title,
+  description,
+  stars,
+  web,
+  urlRepository,
+}) => {
   return (
     <div className="item-repository bg-dseta p-6 mb-3 shadow">
       <p className="uppercase text-xs">{language}</p>
-      <p className="text-xl font-semibold mt-2">{title}</p>
+      <a
+        href={urlRepository}
+        rel="noopener noreferrer"
+        target="_blank"
+        className="text-xl font-semibold mt-2 text-gray-500 hover:text-white"
+      >
+        {title}
+      </a>
       <p className="text-sm text-gray-500 mb-3">{description}</p>
       <p className="text-sm text-gray-500">
         <span className="mr-4">⭐️{stars}</span>
         <span className="mr-4">
           👁
-          <a href={web} className="cursor-pointer">
-            Live
+          <a
+            href={web}
+            rel="noopener noreferrer"
+            target="_blank"
+            className="cursor-pointer hover:text-gamma"
+          >
+            Demo
           </a>
-        </span>
-        <span>
-          💾 <a href={web}>Code</a>
         </span>
       </p>
     </div>
@@ -29,6 +45,7 @@ ItemRepository.defaultProps = {
   description: "",
   stars: 0,
   web: "",
+  urlRepository: "",
 }
 
 ItemRepository.propTypes = {
@@ -37,5 +54,6 @@ ItemRepository.propTypes = {
   description: PropTypes.string,
   stars: PropTypes.number,
   web: PropTypes.string,
+  urlRepository: PropTypes.string,
 }
 export default ItemRepository

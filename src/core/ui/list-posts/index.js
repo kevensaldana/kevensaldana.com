@@ -5,7 +5,6 @@ import PropTypes from "prop-types"
 import ItemPost from "../item-post"
 
 const ListPosts = ({ posts }) => {
-  console.log("ListPosts", posts)
   return (
     <div className="list-posts flex flex-wrap justify-between">
       {posts.map((post, index) => {
@@ -16,6 +15,8 @@ const ListPosts = ({ posts }) => {
               tags={post.tags}
               detail={post.detail}
               title={post.title}
+              timeToRead={post.timeToRead}
+              url={post.path}
             />
           </div>
         )

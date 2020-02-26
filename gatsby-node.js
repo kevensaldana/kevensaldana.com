@@ -22,6 +22,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       allMdx {
         edges {
           node {
+            timeToRead
             frontmatter {
               path
               title
@@ -57,7 +58,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       })
     })
     const tagList = Array.from(tagSet)
-    console.log("tagList", tagList)
 
     tagList.forEach((tag, index) => {
       createPage({

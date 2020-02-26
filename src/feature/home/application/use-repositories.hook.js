@@ -22,6 +22,7 @@ export default function useRepositoriesHook() {
                 isFork
                 isPrivate
                 name
+                url
                 stargazers {
                   totalCount
                 }
@@ -53,7 +54,8 @@ export default function useRepositoriesHook() {
         node.name,
         node.description,
         node.stargazers.totalCount,
-        node.homepageUrl
+        node.homepageUrl,
+        node.url
       )
   )
   return listRepos

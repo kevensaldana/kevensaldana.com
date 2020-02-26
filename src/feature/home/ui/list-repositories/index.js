@@ -17,6 +17,7 @@ const ListRepositories = () => {
             language={node.language}
             stars={node.stars}
             web={node.web}
+            urlRepository={node.urlRepository}
           />
         )
       })}
