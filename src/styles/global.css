@@ -20,8 +20,8 @@
 
 body {
   -webkit-font-smoothing: antialiased;
-  background: var(--alpha);
-  @apply text-white;
+  /*background: var(--alpha);*/
+  /*@apply text-white;*/
   font-family: "Poppins", sans-serif;
 }
 

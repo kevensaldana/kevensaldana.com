@@ -63,7 +63,6 @@ module.exports = {
     },
     "gatsby-remark-reading-time",
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-mdx`,
     {
       resolve: `gatsby-plugin-nprogress`,
     },
@@ -115,21 +114,24 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: `gatsby-plugin-mdx`,
       options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-prismjs`,
-            options: {
-              aliases: { sh: "bash", js: "javascript" },
-              showLineNumbers: true,
-            },
-          },
+        extensions: [".mdx", ".md"],
+        // a workaround to solve mdx-remark plugin compat issue
+        // https://github.com/gatsbyjs/gatsby/issues/15486
+        plugins: [`gatsby-remark-images`],
+        gatsbyRemarkPlugins: [
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 1035,
-              sizeByPixelDensity: true,
+              maxWidth: 590,
+            },
+          },
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: "language-",
+              inlineCodeMarker: null,
             },
           },
         ],
