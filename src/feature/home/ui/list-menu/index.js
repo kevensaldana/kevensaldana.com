@@ -15,11 +15,11 @@ const ListSections = () => {
           <li key={index}>
             <a
               className={
-                "mb-3 inline-flex items-center hover:text-gamma cursor-pointer"
+                "mb-3 inline-flex items-center hover:text-primary cursor-pointer"
               }
             >
               <span className={"line"}></span>
-              <span className="uppercase text-sm text-gray-400 hover:text-gamma">
+              <span className="text-lg font-semibold hover:text-primary">
                 {item.label}
               </span>
             </a>

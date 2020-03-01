@@ -1,9 +1,11 @@
 .list-sections {
+  list-style: none;
+  padding: 0;
   a {
     &:hover {
       .line {
         width: 30px;
-        background: var(--gamma);
+        background: var(--primary);
       }
     }
     .line {

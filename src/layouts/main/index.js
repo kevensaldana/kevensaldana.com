@@ -6,7 +6,7 @@ const MainLayout = ({ children }) => {
   return (
     <React.Fragment>
       <div className="fixed bottom-0 left-0 z-20 w-full h-10 pointer-events-none gradient-y-transparent-night" />
-      <div className="layout-main">{children}</div>
+      {children}
       <div className="fixed top-0 left-0 z-20 w-full h-10 pointer-events-none gradient-y-night-transparent" />
     </React.Fragment>
   )

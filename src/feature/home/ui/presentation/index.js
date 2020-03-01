@@ -30,13 +30,13 @@ const Presentation = () => {
         <Header />
         <h1
           ref={sectionPresentationTitle}
-          className="section-index__title  lg:text-5xl  text-3xl font-medium mb-6 opacity-0 leading-tight"
+          className="section-index__title opacity-0"
         >
           <span className="wave mr-4 text-4xl">👋🏻</span>
           <br />
           Hello! I'm Keven,
           <br />
-          <span className="text-gamma inline-block">web developer</span>
+          <span className="text-primary inline-block">web developer</span>
           <br />
           with experience in: <br />
           🏦, 🚎 and e-commerce.
@@ -45,7 +45,7 @@ const Presentation = () => {
       <div className="overflow-hidden relative">
         <p
           ref={sectionPresentationSubTitle}
-          className="section-index__subtitle text-sm lg:text-lg mb-1 font-light text-gray-400 opacity-0 max-w-lg"
+          className="section-index__subtitle text-on_background lg:text-lg mb-1 font-light opacity-0 max-w-lg"
         >
           Graduate of National University of Trujillo. I have 5 years producing
           high quality online platforms .

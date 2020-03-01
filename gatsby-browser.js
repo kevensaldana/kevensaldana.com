@@ -1,4 +1,5 @@
 require("./src/styles/global.css")
+require("prism-themes/themes/prism-atom-dark.css")
 
 const React = require("react")
 const MainLayout = require("./src/layouts/main").default

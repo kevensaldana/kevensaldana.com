@@ -5,26 +5,23 @@ import PropTypes from "prop-types"
 
 const ItemPost = ({ detail, img, title, tags, timeToRead, url }) => {
   return (
-    <div className="item-post relative bg-dseta p-6">
-      <p className={"text-gray-500 text-xs"}>
+    <div className="item-post relative bg-surface p-6">
+      <p className={" text-xs"}>
         {detail}, {timeToRead} min read
       </p>
-      <a
-        href={`/articles${url}`}
-        className={"text-xl font-semibold my-2 text-gray-500 hover:text-white"}
-      >
+      <a href={`/articles${url}`} className={"text-xl font-semibold"}>
         {title}
       </a>
       {/*<ul className={"item-post__tags mb-4"}>*/}
       {/*  {tags.map((tag, index) => {*/}
       {/*    return (*/}
-      {/*      <li className={"text-gamma mr-3"} key={index}>*/}
+      {/*      <li className={"text-primary mr-3"} key={index}>*/}
       {/*        <a href="">#{tag}</a>*/}
       {/*      </li>*/}
       {/*    )*/}
       {/*  })}*/}
       {/*</ul>*/}
-      <div className="hidden lg:block mt-2">
+      <div className="hidden lg:block mt-5">
         <Img fluid={img} />
       </div>
     </div>

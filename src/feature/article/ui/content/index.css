@@ -1,0 +1,8 @@
+.content-article {
+  .gatsby-resp-image-wrapper {
+    @apply my-10;
+  }
+  .gatsby-highlight {
+    @apply text-base my-10;
+  }
+}

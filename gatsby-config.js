@@ -13,6 +13,12 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+        shortname: `kevensaldana`,
+      },
+    },
+    {
       resolve: `gatsby-source-github-api`,
       options: {
         url: `https://api.github.com/graphql`,
@@ -124,7 +130,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590,
+              wrapperStyle: () => "margin-bottom: 20px",
             },
           },
           {

@@ -11,18 +11,18 @@ const ItemRepository = ({
   urlRepository,
 }) => {
   return (
-    <div className="item-repository bg-dseta p-6 mb-3 shadow">
+    <div className="item-repository bg-surface p-6 mb-3 shadow">
       <p className="uppercase text-xs">{language}</p>
       <a
         href={urlRepository}
         rel="noopener noreferrer"
         target="_blank"
-        className="text-xl font-semibold mt-2 text-gray-500 hover:text-white"
+        className="text-xl font-semibold mt-2"
       >
         {title}
       </a>
-      <p className="text-sm text-gray-500 mb-3">{description}</p>
-      <p className="text-sm text-gray-500">
+      <p className="text-sm  mb-3">{description}</p>
+      <p className="text-sm ">
         <span className="mr-4">⭐️{stars}</span>
         <span className="mr-4">
           👁
@@ -30,7 +30,7 @@ const ItemRepository = ({
             href={web}
             rel="noopener noreferrer"
             target="_blank"
-            className="cursor-pointer hover:text-gamma"
+            className="cursor-pointer"
           >
             Demo
           </a>

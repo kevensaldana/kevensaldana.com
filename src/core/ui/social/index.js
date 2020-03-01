@@ -35,7 +35,7 @@ const Social = ({ className }) => {
                 href={item.src}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block text-center text-gray-500 hover:text-gamma pr-2"
+                className="inline-block text-center text-gray-500 hover:text-primary pr-2"
               >
                 {item.name}
               </a>
