@@ -1,5 +1,6 @@
 import React from "react"
 import Img from "gatsby-image"
+import { Link } from "gatsby"
 import "./index.css"
 import PropTypes from "prop-types"
 
@@ -9,9 +10,9 @@ const ItemPost = ({ detail, img, title, tags, timeToRead, url }) => {
       <p className={" text-xs"}>
         {detail}, {timeToRead} min read
       </p>
-      <a href={`/articles${url}`} className={"text-xl font-semibold"}>
-        {title}
-      </a>
+      <div className={"text-xl font-semibold"}>
+        <Link to={`/articles${url}`}>{title}</Link>
+      </div>
       {/*<ul className={"item-post__tags mb-4"}>*/}
       {/*  {tags.map((tag, index) => {*/}
       {/*    return (*/}
@@ -30,6 +31,7 @@ const ItemPost = ({ detail, img, title, tags, timeToRead, url }) => {
 ItemPost.defaultProps = {
   detail: "",
   img: {},
+  imgUrl: "",
   title: "",
   tags: [],
   isNew: true,
@@ -40,6 +42,7 @@ ItemPost.defaultProps = {
 ItemPost.propTypes = {
   detail: PropTypes.string,
   img: PropTypes.object,
+  imgUrl: PropTypes.string,
   title: PropTypes.string,
   tags: PropTypes.array,
   isNew: PropTypes.bool,

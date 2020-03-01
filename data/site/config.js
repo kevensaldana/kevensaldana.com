@@ -26,7 +26,7 @@ const config = {
     email: "keven.sa17@gmail.com",
     networks: [
       { name: "Email", src: "mailto:keven.sa17@gmail.com?subject=Hi" },
-      { name: "Twitter", src: "https://twitter.com/kevsa17" },
+      { name: "Twitter", src: "https://twitter.com/kevsa17", user: "@kevsa17" },
       { name: "Linkedin", src: "https://www.linkedin.com/in/kevengsa/" },
     ],
   },

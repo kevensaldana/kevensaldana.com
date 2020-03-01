@@ -4,16 +4,26 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import config from "data/site/config"
 import { Disqus } from "gatsby-plugin-disqus"
 import ContentArticle from "./ui/content"
+import Seo from "core/ui/seo"
 
 export default function PageTemplate({ data: { mdx } }) {
-  console.log("data", mdx, config)
+  const url = `${config.url + "/articles" + mdx.frontmatter.path}`
+  const image =
+    config.url + mdx.frontmatter.featuredImage.childImageSharp.fixed.src
   const disqusConfig = {
-    url: `${config.url + mdx.frontmatter.path}`,
+    url,
     identifier: mdx.id,
     title: mdx.frontmatter.title,
   }
   return (
     <div className="article container">
+      <Seo
+        title={mdx.frontmatter.title}
+        image={image}
+        url={url}
+        description={mdx.frontmatter.description}
+        type="article"
+      />
       <h1 className={"text-primary text-center max-w-4xl m-auto"}>
         {mdx.frontmatter.title}
       </h1>
@@ -27,7 +37,7 @@ export default function PageTemplate({ data: { mdx } }) {
         {/*<div className="lg:w-1/3 ml-auto">ULTIMOS POST</div>*/}
       </div>
 
-      <div className={"mb-16"}>
+      <div className={"pb-16"}>
         <Disqus config={disqusConfig} />
       </div>
     </div>
@@ -42,7 +52,15 @@ export const pageQuery = graphql`
       timeToRead
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
+        description
         path
+        featuredImage {
+          childImageSharp {
+            fixed {
+              src
+            }
+          }
+        }
         title
         tags
       }

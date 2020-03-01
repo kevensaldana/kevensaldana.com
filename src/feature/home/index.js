@@ -12,7 +12,7 @@ import ListSections from "./ui/list-menu"
 const Home = ({ posts }) => {
   return (
     <React.Fragment>
-      <Seo title="" />
+      <Seo />
       <div className="container relative">
         <div className="lg:flex flex-row">
           <div className="flex  lg:w-1/2 lg:pr-20 lg:fixed lg:h-screen content-center flex-col justify-center">
