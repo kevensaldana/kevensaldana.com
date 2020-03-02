@@ -6,7 +6,6 @@ date: 2019-01-29
 featuredImage: ./image.jpg
 tags: [learning, tag2]
 ---
-![Some Cover Image](./image.jpg)
 > This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote.
 
 In this article, we’ll take a look at the gatsby-image component and how it can simplify the process of using images in various scenarios. The steps in this guide assume you have a working [Gatsby](http://dev.nodeca.com) project. So if you haven’t already, you can get started with Gatsby by following along the Gatsby First Steps article.
@@ -44,9 +43,11 @@ module.exports = {
 ```
 Notice that we are configuring gatsby-source-filesystem as well. This is to create file nodes from our images so they’re available through graphql queries. For this guide, we’re placing our images in the src/images directory.
 
+![Some Cover Image](./image.jpg)
+
 As for our other plugins:
 
-+ gatsby-plugin-sharp is a low-level helper that powers the connections between Sharp and gatsby-image. It also exposes several image processing functions.
++ `gatsby-plugin-sharp` is a low-level helper that powers the connections between Sharp and gatsby-image. It also exposes several image processing functions.
 + gatsby-transformer-sharp facilitates the creation of multiples images of the right sizes and resolutions.
 
 

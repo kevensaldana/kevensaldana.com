@@ -5,4 +5,7 @@
   .gatsby-highlight {
     @apply text-base my-10;
   }
+  code {
+    @apply text-base;
+  }
 }

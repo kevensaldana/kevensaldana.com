@@ -37,6 +37,7 @@ const Social = ({ className }) => {
                 rel="noopener noreferrer"
                 className="inline-block text-center text-gray-500 hover:text-primary pr-2"
               >
+                <i className="icon-facebook" />
                 {item.name}
               </a>
             )
