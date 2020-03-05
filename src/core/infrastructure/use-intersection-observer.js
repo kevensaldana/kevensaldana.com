@@ -23,7 +23,9 @@ export default function useIntersectionObserver({
 
     setTimeout(() => {
       refs.forEach(ref => {
-        observer.observe(ref.current)
+        if (ref.current) {
+          observer.observe(ref.current)
+        }
       })
     }, 500)
   }, [])

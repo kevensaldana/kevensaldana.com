@@ -1,22 +1,22 @@
 [
   {
-    "title": "Web Tipo de Cambio",
-    "description": "Web gratuita donde cambiar dólares en el Perú con el respaldo del banco para brindar mayor seguridad.",
+    "title": "Web Exchange Rate",
+    "description": "Website to change dollars with a bank support to provide more security.",
     "image": "./images/projects/cocoslucas.png"
   },
   {
-    "title": "Banca por Internet Empresas",
-    "description": "Web para la gestión de operaciones bancarias para empresas (pagos masivos, consultas y transferencias online,\nautorizaciones, etc).",
+    "title": "Home Banking Business",
+    "description": "Banking operations for companies (mass payments, balance inquiries and online transfers, authorizations, etc).",
     "image": "./images/projects/companies.png"
   },
   {
-    "title": "Banca por Internet Personas",
-    "description": "Web para la gestión de operaciones bancarias para personas (consulta de saldos, pagos, transferencias, operaciones\nfrecuentes, configuración de tarjetas, etc).",
+    "title": "Home Banking Web",
+    "description": "Banking operations for people (balance inquiries , payments, transfers, frequent operations, cards configuration, etc).",
     "image": "./images/projects/persons.png"
   },
   {
-    "title": "Compra de tickets",
-    "description": "Pasarela para comprar tickets de buses en USA.",
+    "title": "Shopping cart in transport",
+    "description": "Shopping cart to sell bus tickets (version mobile friendly)",
     "image": "./images/projects/redcoach.png"
   }
 ]

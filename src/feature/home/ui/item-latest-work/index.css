@@ -7,7 +7,7 @@
     top: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.49);
+    background: rgba(0, 0, 0, 0.7);
     transition: all 0.2s ease-in;
     & > div {
       transition: all 0.2s ease-in;

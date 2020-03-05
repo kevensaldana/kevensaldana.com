@@ -1,0 +1,11 @@
+.item-post {
+  @screen md {
+    max-width: 326px;
+  }
+  &__tags {
+    list-style: none;
+    li {
+      display: inline-block;
+    }
+  }
+}

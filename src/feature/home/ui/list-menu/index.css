@@ -1,0 +1,21 @@
+.list-sections {
+  list-style: none;
+  padding: 0;
+  a {
+    &:hover,
+    &.active {
+      .line {
+        width: 40px;
+        background: var(--primary);
+      }
+    }
+    .line {
+      transition: all 0.3s ease-in-out;
+      content: "";
+      width: 25px;
+      height: 1px;
+      background: white;
+      margin-right: 16px;
+    }
+  }
+}

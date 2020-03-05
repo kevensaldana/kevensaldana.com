@@ -8,25 +8,28 @@
 
 :root {
   --transparent: transparent;
-  --black: #000;
-  --white: #fff;
-  --alpha: #0f1321;
-  --beta: #0d1117;
-  --gamma: #ffd160;
-  --delta: #ef8746;
-  --epsilon: #ea5d30;
+  --black: black;
+  --primary: #f1ca3c;
+  --primary_variant: #ffe2a9;
+  --on_primary: white;
+  --background: #0d1117;
+  --on_background: rgba(255, 255, 255, 0.8);
+  --surface: #171c23;
+  --on_surface: white;
+  --error: #b03c28;
+  --on_error: white;
 }
 
 body {
   -webkit-font-smoothing: antialiased;
-  background: linear-gradient(135deg, var(--alpha) 0%, var(--beta) 100%);
-  @apply text-white;
-  font-family: "Poppins", sans-serif;
+  background: var(--background);
+  color: var(--on_background);
+  @apply font-sans;
 }
 
 ::selection {
-  background-color: var(--epsilon); /* fallback for old browsers */
-  color: white;
+  background-color: #20ffd3; /* fallback for old browsers */
+  color: black;
 }
 
 .overlay {
@@ -37,4 +40,56 @@ body {
   z-index: 1;
   left: 0;
   top: 0;
+}
+h1,
+h2,
+h3 {
+  @apply font-serif;
+}
+h1 {
+  @apply text-3xl font-semibold mb-6 leading-tight;
+  @screen lg {
+    @apply text-5xl mb-4;
+  }
+}
+h2 {
+  @apply text-2xl font-semibold mb-6 leading-tight;
+  @screen lg {
+    @apply text-4xl mb-4;
+  }
+}
+h3 {
+  @apply text-xl font-semibold mb-6 leading-tight;
+  @screen lg {
+    @apply text-3xl mb-4;
+  }
+}
+ul {
+  @apply list-disc list-outside pl-5;
+}
+ol {
+  @apply list-decimal list-outside pl-5;
+}
+table {
+  @apply table-auto mb-8;
+}
+td,
+th {
+  @apply border px-4 py-2;
+}
+p {
+  @apply my-2;
+}
+a:hover {
+  @apply text-primary;
+}
+blockquote {
+  @apply pl-6 leading-normal;
+  border-left: 3px solid var(--primary);
+}
+.gradient-y-night-transparent {
+  background: linear-gradient(0deg, rgba(21, 21, 21, 0), var(--background));
+}
+.gradient-y-transparent-night {
+  background: linear-gradient(180deg, rgba(21, 21, 21, 0), var(--background));
 }

@@ -1,0 +1,11 @@
+.post-layout {
+  p,
+  ul,
+  ol {
+    @apply mb-8;
+  }
+  h2,
+  h3 {
+    @apply font-medium text-primary;
+  }
+}

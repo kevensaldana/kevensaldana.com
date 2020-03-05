@@ -42,9 +42,7 @@ const ItemLatestWork = ({ img, title, description }) => {
     <div className="item-latest-work">
       <div className="overflow-hidden relative">
         <div ref={contentHideRef} className="opacity-0">
-          <h2 className="text-xl font-medium mb-4 relative md:hidden">
-            {title}
-          </h2>
+          <h2 className="relative md:hidden">{title}</h2>
           <p className="mb-6 text-gray-500 md:hidden">{description}</p>
         </div>
       </div>
@@ -53,8 +51,8 @@ const ItemLatestWork = ({ img, title, description }) => {
         <Img fluid={img} />
         <div className="absolute content">
           <div className="flex flex-col justify-center h-full text-center px-5 lg:px-20">
-            <h2 className="text-3xl font-medium mb-1 relative">{title}</h2>
-            <p className="text-xl mb-6">{description}</p>
+            <h3 className="relative">{title}</h3>
+            <p className="text-lg mb-6">{description}</p>
           </div>
         </div>
       </div>

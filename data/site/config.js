@@ -1,9 +1,9 @@
 const config = {
   title: "Keven Saldaña - Developer",
-  lang: "es",
+  lang: "en",
   start_url: "/",
   description:
-    "Desarrollador web peruano. Estudié Ciencias de la Computación en la Universidad Nacional de Trujillo. Especializado en Javascript.",
+    "Graduate of National University of Trujillo. I have 5 years producing high quality online platforms .",
   author: "Keven Saldaña",
   fonts: [`material icons`, `Poppins\:300,400,500,700,800,900`],
   icon: "./data/site/images/brand/icon.png",
@@ -26,7 +26,7 @@ const config = {
     email: "keven.sa17@gmail.com",
     networks: [
       { name: "Email", src: "mailto:keven.sa17@gmail.com?subject=Hi" },
-      { name: "Twitter", src: "https://twitter.com/kevsa17" },
+      { name: "Twitter", src: "https://twitter.com/kevsa17", user: "@kevsa17" },
       { name: "Linkedin", src: "https://www.linkedin.com/in/kevengsa/" },
     ],
   },

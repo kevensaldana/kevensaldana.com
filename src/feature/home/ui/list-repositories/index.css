@@ -1,0 +1,14 @@
+.list-repositories {
+  @screen lg {
+    &:hover {
+      .item-repository {
+        transition: all 0.4s ease;
+        opacity: 0.4;
+        &:hover {
+          transform: scale(1.1);
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
