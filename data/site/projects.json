@@ -1,22 +1,22 @@
 [
   {
-    "title": "Cocos y Lucas",
-    "description": "Website to change dollars in Peru with a bank support to provide greater security.",
+    "title": "Web Exchange Rate",
+    "description": "Website to change dollars with a bank support to provide more security.",
     "image": "./images/projects/cocoslucas.png"
   },
   {
-    "title": "Internet Banking Companies",
+    "title": "Home Banking Business",
     "description": "Banking operations for companies (mass payments, balance inquiries and online transfers, authorizations, etc).",
     "image": "./images/projects/companies.png"
   },
   {
-    "title": "Internet Banking People\n",
+    "title": "Home Banking Web",
     "description": "Banking operations for people (balance inquiries , payments, transfers, frequent operations, cards configuration, etc).",
     "image": "./images/projects/persons.png"
   },
   {
-    "title": "Shopping cart for transport",
-    "description": "Shopping cart to sale bus tickets (mobile friendly)",
+    "title": "Shopping cart in transport",
+    "description": "Shopping cart to sell bus tickets (version mobile friendly)",
     "image": "./images/projects/redcoach.png"
   }
 ]
