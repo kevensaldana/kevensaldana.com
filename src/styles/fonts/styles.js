@@ -29,7 +29,7 @@ export const GlobalStyle = createGlobalStyle`
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-envelop:before {
+.icon-email:before {
   content: "\\e945";
 }
 .icon-embed2:before {

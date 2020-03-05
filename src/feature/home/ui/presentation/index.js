@@ -34,8 +34,7 @@ const Presentation = () => {
         >
           <span className="wave mr-4 text-4xl">👋🏻</span>
           <br />
-          Hello! I'm Keven,
-          <br />
+          Hello! I'm Keven,&nbsp;
           <span className="text-primary inline-block">web developer</span>
           <br />
           with experience in: <br />

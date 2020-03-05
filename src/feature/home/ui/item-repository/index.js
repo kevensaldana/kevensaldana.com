@@ -30,7 +30,7 @@ const ItemRepository = ({
             href={web}
             rel="noopener noreferrer"
             target="_blank"
-            className="cursor-pointer"
+            className="cursor-pointer font-semibold"
           >
             Demo
           </a>

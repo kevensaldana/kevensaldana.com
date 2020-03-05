@@ -30,8 +30,9 @@ export default function PageTemplate({ data: { mdx } }) {
       <p className="text-sm mb-4 mt-2 font-sans text-center">
         {mdx.frontmatter.date}, {mdx.timeToRead} min read
       </p>
-      <div className="lg:flex mb-10">
-        <div className="lg:w-2/3 mr-auto">
+      <div className="lg:flex my-12">
+        {/*<div className="lg:w-2/3 mr-auto">*/}
+        <div className="lg:w-2/3 m-auto">
           <ContentArticle body={mdx.body} />
         </div>
         {/*<div className="lg:w-1/3 ml-auto">ULTIMOS POST</div>*/}
