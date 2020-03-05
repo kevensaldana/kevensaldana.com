@@ -14,7 +14,9 @@ jobs:
           node-version: "12.x"
           registry-url: https://registry.npmjs.org/
       - name: Build project
-        run: env GATSBY_API_URL=${{secrets.API}} npm i && npm run build
+        run: npm i && npm run build
+        env:
+          GATSBY_API_URL: ${{secrets.API}}
       - name: Build and tag image
         run: docker build -t "docker.pkg.github.com/$GITHUB_REPOSITORY/kevensaldana.com:latest" .
       - name: Docker login
