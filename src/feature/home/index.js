@@ -43,7 +43,7 @@ const Home = ({ posts }) => {
       <Seo />
       <div className="container relative">
         <div className="lg:flex flex-row">
-          <div className="flex  lg:w-1/2 lg:pr-20 lg:fixed lg:h-screen content-center flex-col justify-center">
+          <div className="flex  lg:w-1/2 lg:pr-20 lg:fixed lg:h-screen content-center flex-col justify-center md:pl-4">
             <div className="mb-8">
               <Presentation />
             </div>
@@ -54,7 +54,7 @@ const Home = ({ posts }) => {
               <Social />
             </div>
           </div>
-          <div className="lg:w-1/2 lg:absolute lg:right-0 lg:pl-20 lg:pt-20">
+          <div className="lg:w-1/2 lg:absolute lg:right-0 lg:pl-20 lg:pt-20 md:pr-4">
             <div className="item-scroll mb-6" data-order="0">
               <ListRepositories />
             </div>

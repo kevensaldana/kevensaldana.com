@@ -30,7 +30,7 @@ const Presentation = () => {
         <Header />
         <h1
           ref={sectionPresentationTitle}
-          className="section-index__title opacity-0"
+          className="section-index__title opacity-0 max-w-3xl"
         >
           <span className="wave mr-4 text-4xl">👋🏻</span>
           <br />
