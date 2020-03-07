@@ -1,17 +1,17 @@
 [
   {
     "title": "Web Exchange Rate",
-    "description": "Website to change dollars with a bank support to provide more security.",
+    "description": "Website to change dollars with bank support to provide more security.",
     "image": "./images/projects/cocoslucas.png"
   },
   {
     "title": "Home Banking Business",
-    "description": "Banking operations for companies (mass payments, balance inquiries and online transfers, authorizations, etc).",
+    "description": "Banking operations for enterprises (mass payments, balance inquiries, online transfers, authorizations, etc).",
     "image": "./images/projects/companies.png"
   },
   {
     "title": "Home Banking Web",
-    "description": "Banking operations for people (balance inquiries , payments, transfers, frequent operations, cards configuration, etc).",
+    "description": "Banking operations for people (balance inquiries , payments, transfers, frequent operations, card configuration, etc).",
     "image": "./images/projects/persons.png"
   },
   {

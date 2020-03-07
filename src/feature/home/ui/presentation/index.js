@@ -46,7 +46,7 @@ const Presentation = () => {
           ref={sectionPresentationSubTitle}
           className="section-index__subtitle text-on_background lg:text-lg mb-1 font-light opacity-0 max-w-lg"
         >
-          Graduate of National University of Trujillo. I have 5 years producing
+          Graduated of National University of Trujillo. I have 5 years producing
           high quality online platforms .
         </p>
       </div>
