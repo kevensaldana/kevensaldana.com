@@ -207,6 +207,5 @@ module.exports = {
         includeInDevelopment: false,
       },
     },
-    // `gatsby-plugin-offline`,
   ],
 }

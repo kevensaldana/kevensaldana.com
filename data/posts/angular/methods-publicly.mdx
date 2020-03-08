@@ -1,0 +1,50 @@
+---
+title: How to expose angular methods publicly?
+path: /how-to-expose-angular-methods-publicly
+description: Angular zone is an execution context that persists across async tasks(Events, XMLHttpRequests, and Timers) and notifies the framework to perform change detection when an asynchronous operation has happened.
+date: 2020-03-07
+featuredImage: ./image.jpg
+tags: [learning, angular]
+---
+
+I am currently working on an angular project and one little requirement that I had, depended on a deployment in production, which involves a lot of time.
+
+To save time. The execution of this javascript code is by Google Optimizer, but our framework is Angular, so how we do?
+
+Angular zone is an execution context that persists across async tasks(Events, XMLHttpRequests, and Timers) and notifies the framework to perform change detection when an asynchronous operation has happened.
+
+Let's get started. 🤓
+
+First, we add a method that we want to expose in the object window:
+
+``` javascript
+declare global {
+  interface Window { openMessageAngular: () => void; }
+}
+```
+
+Next, we need to create a method that calls a run() that allows you to execute a function inside the angular zone.
+
+``` javascript
+private showMessageFromWindow() {
+  this.zone.run(() => {
+    // your logic
+    console.log('hola', this.title);
+  });
+}
+```
+
+Now, we pass a reference of the new function with context this in case were necesary:
+
+``` javascript
+ngOnInit() {
+ window.openMessageAngular = this.showMessageFromWindow.bind(this);
+}
+```
+
+Let's run the app by using npm start, and view the result.
+
+![Some Cover Image](https://media.giphy.com/media/lP9WDjzI7e8u4J8HM7/giphy.gif)
+
+
+Happy Coding! 💻

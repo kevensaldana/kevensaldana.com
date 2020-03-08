@@ -7,7 +7,7 @@ import gsap from "gsap/gsap-core"
 
 const items = [
   { label: "Personal projects" },
-  // { label: "Latest posts" },
+  { label: "Latest posts" },
   { label: "I teamed up and worked arm to arm in :" },
 ]
 
@@ -27,9 +27,12 @@ const ListSections = () => {
   }
   const [count, setCount] = useState(0)
   useEffect(() => {
-    eventUpdateScroll.subscribe(index => {
+    const subscription = eventUpdateScroll.subscribe(index => {
       setCount(index)
     })
+    return () => {
+      subscription.unsubscribe()
+    }
   }, [])
 
   useIntersectionObserver({

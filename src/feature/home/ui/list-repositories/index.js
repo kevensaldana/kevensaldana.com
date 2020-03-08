@@ -5,7 +5,6 @@ import useRepositoriesHook from "../../application/use-repositories.hook"
 
 const ListRepositories = () => {
   const nodes = useRepositoriesHook()
-  console.log("nodes", nodes)
   return (
     <div className="list-repositories">
       {nodes.map((node, index) => {

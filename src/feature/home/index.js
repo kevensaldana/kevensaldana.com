@@ -6,7 +6,7 @@ import ListRepositories from "./ui/list-repositories"
 import Seo from "core/ui/seo"
 import PropTypes from "prop-types"
 import Social from "../../core/ui/social"
-// import ListPosts from "../../core/ui/list-posts"
+import ListPosts from "../../core/ui/list-posts"
 import ListSections from "./ui/list-menu"
 import eventUpdateScroll from "./application/emit-event-update-scroll"
 
@@ -58,10 +58,10 @@ const Home = ({ posts }) => {
             <div className="item-scroll mb-6" data-order="0">
               <ListRepositories />
             </div>
-            {/*<div className="mt-10 item-scroll" data-order="1">*/}
-            {/*  <ListPosts posts={posts} />*/}
-            {/*</div>*/}
-            <div className="lg:mt-10 item-scroll" data-order="1">
+            <div className="mt-10 item-scroll" data-order="1">
+              <ListPosts posts={posts} />
+            </div>
+            <div className="lg:mt-10 item-scroll" data-order="2">
               <LatestWork />
             </div>
           </div>

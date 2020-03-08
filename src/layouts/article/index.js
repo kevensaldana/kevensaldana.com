@@ -4,7 +4,7 @@ import "./index.css"
 import Header from "../../core/ui/header/header"
 import { MDXProvider } from "@mdx-js/react"
 
-const SecondaryLayout = ({ children }) => {
+const ArticleLayout = ({ children }) => {
   return (
     <React.Fragment>
       <Header center={true} />
@@ -27,8 +27,8 @@ const SecondaryLayout = ({ children }) => {
   )
 }
 
-SecondaryLayout.propTypes = {
+ArticleLayout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default SecondaryLayout
+export default ArticleLayout

@@ -3,12 +3,17 @@ require("prism-themes/themes/prism-dracula.css")
 
 const React = require("react")
 const MainLayout = require("./src/layouts/main").default
-const SecondaryLayout = require("./src/layouts/secondary").default
+const ArticleLayout = require("./src/layouts/article").default
+const DefaultLayout = require("./src/layouts/default").default
 
 exports.wrapPageElement = ({ element, props }) => {
-  return props.path === "/" ? (
-    <MainLayout {...props}>{element}</MainLayout>
-  ) : (
-    <SecondaryLayout {...props}>{element}</SecondaryLayout>
-  )
+  const path = props.path.split("/")[1]
+
+  if (path === "") {
+    return <MainLayout {...props}>{element}</MainLayout>
+  }
+  if (path === "articles") {
+    return <ArticleLayout {...props}>{element}</ArticleLayout>
+  }
+  return <DefaultLayout {...props}>{element}</DefaultLayout>
 }

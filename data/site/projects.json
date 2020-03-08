@@ -6,12 +6,12 @@
   },
   {
     "title": "Home Banking Business",
-    "description": "Banking operations for enterprises (mass payments, balance inquiries, online transfers, authorizations, etc).",
+    "description": "Banking operations for enterprises (mass payments, balance inquiries, online transfers, authorizations, etc.).",
     "image": "./images/projects/companies.png"
   },
   {
     "title": "Home Banking Web",
-    "description": "Banking operations for people (balance inquiries , payments, transfers, frequent operations, card configuration, etc).",
+    "description": "Banking operations for people (balance inquiries, payments, transfers, frequent transactions, card configuration, etc.).",
     "image": "./images/projects/persons.png"
   },
   {

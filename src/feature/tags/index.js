@@ -1,8 +1,17 @@
 import React from "react"
 import { graphql } from "gatsby"
+import usePostsHook from "../../core/application/use-posts.hook"
+import ListPosts from "../../core/ui/list-posts"
 
 export default function PageTemplate({ data }) {
-  return <div className="container"></div>
+  console.log("data", data)
+  const posts = usePostsHook(data.allMdx.nodes)
+  console.log("posts", posts)
+  return (
+    <div className="container">
+      <ListPosts posts={posts} />
+    </div>
+  )
 }
 
 export const pageQuery = graphql`
@@ -11,7 +20,7 @@ export const pageQuery = graphql`
       nodes {
         timeToRead
         frontmatter {
-          date
+          date(formatString: "MMMM DD, YYYY")
           path
           title
           tags
