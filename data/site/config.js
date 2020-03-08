@@ -3,7 +3,7 @@ const config = {
   lang: "en",
   start_url: "/",
   description:
-    "Graduate of National University of Trujillo. I have 5 years producing high quality online platforms .",
+    "I graduated from the National University of Trujillo. I have five years of producing high-quality online platforms.",
   author: "Keven Saldaña",
   fonts: [`material icons`, `Poppins\:300,400,500,700,800,900`],
   icon: "./data/site/images/brand/icon.png",

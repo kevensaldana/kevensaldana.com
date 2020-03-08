@@ -7,7 +7,8 @@ const ArticleLayout = require("./src/layouts/article").default
 const DefaultLayout = require("./src/layouts/default").default
 
 exports.wrapPageElement = ({ element, props }) => {
-  const path = props.path.split("/")[1]
+  const path = props.location.pathname.split("/")[1]
+
   if (path === "") {
     return <MainLayout {...props}>{element}</MainLayout>
   }

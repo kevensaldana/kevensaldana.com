@@ -3,6 +3,7 @@ import gsap from "gsap"
 import "./index.css"
 import useIntersectionObserver from "core/infrastructure/use-intersection-observer"
 import Header from "../../../../core/ui/header/header"
+import config from "data/site/config"
 
 const Presentation = () => {
   const sectionPresentationTitle = useRef(null)
@@ -46,8 +47,7 @@ const Presentation = () => {
           ref={sectionPresentationSubTitle}
           className="section-index__subtitle text-on_background lg:text-lg mb-1 font-light opacity-0 max-w-lg"
         >
-          I graduated from the National University of Trujillo. I have five
-          years of producing high-quality online platforms.
+          {config.description}
         </p>
       </div>
     </section>

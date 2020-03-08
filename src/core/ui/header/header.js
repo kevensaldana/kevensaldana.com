@@ -7,7 +7,7 @@ import MainLayout from "../../../layouts/main"
 
 const Header = ({ center }) => {
   return (
-    <nav className={`header-nav top-0 py-8`}>
+    <nav className={`header-nav py-8`}>
       <div
         className={`${
           center ? "container" : ""
