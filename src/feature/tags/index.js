@@ -3,10 +3,8 @@ import { graphql } from "gatsby"
 import usePostsHook from "../../core/application/use-posts.hook"
 import ListPosts from "../../core/ui/list-posts"
 
-export default function PageTemplate({ data }) {
-  console.log("data", data)
+export default function TagTemplate({ data }) {
   const posts = usePostsHook(data.allMdx.nodes)
-  console.log("posts", posts)
   return (
     <div className="container">
       <ListPosts posts={posts} />
@@ -29,7 +27,7 @@ export const pageQuery = graphql`
             base
             childImageSharp {
               fluid {
-                base64
+                ...GatsbyImageSharpFluid
               }
             }
           }

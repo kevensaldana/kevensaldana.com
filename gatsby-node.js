@@ -34,7 +34,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     })
   }
 
-  const createPageTag = () => {
+  const createPageTag = articles => {
     const tagSet = new Set()
     const posts = articles.data.allMdx.edges
     posts.forEach(post => {
