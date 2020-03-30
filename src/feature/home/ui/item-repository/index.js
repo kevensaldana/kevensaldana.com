@@ -24,17 +24,19 @@ const ItemRepository = ({
       <p className="text-sm  mb-3">{description}</p>
       <p className="text-sm ">
         <span className="mr-4">⭐️{stars}</span>
-        <span className="mr-4">
-          👁
-          <a
-            href={web}
-            rel="noopener noreferrer"
-            target="_blank"
-            className="cursor-pointer font-semibold"
-          >
-            Demo
-          </a>
-        </span>
+        {web !== "" && (
+          <span className="mr-4">
+            👁
+            <a
+              href={web}
+              rel="noopener noreferrer"
+              target="_blank"
+              className="cursor-pointer font-semibold"
+            >
+              Demo
+            </a>
+          </span>
+        )}
       </p>
     </div>
   )
