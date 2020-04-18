@@ -1,7 +1,7 @@
 import { graphql, useStaticQuery } from "gatsby"
 import Repository from "../domain/repository"
 
-export default function useRepositoriesHook() {
+export default function useRepositoriesHook(topic = "learning") {
   const {
     githubData: {
       data: {
@@ -47,16 +47,22 @@ export default function useRepositoriesHook() {
       }
     }
   `)
-  const listRepos = nodes.map(
-    node =>
-      new Repository(
-        node.languages.nodes[0].name,
-        node.name,
-        node.description,
-        node.stargazers.totalCount,
-        node.homepageUrl,
-        node.url
-      )
-  )
+  const listRepos = nodes
+    .filter(
+      item =>
+        item.repositoryTopics.nodes.filter(item => item.topic.name === topic)
+          .length > 0
+    )
+    .map(
+      node =>
+        new Repository(
+          node.languages.nodes[0].name,
+          node.name,
+          node.description,
+          node.stargazers.totalCount,
+          node.homepageUrl,
+          node.url
+        )
+    )
   return listRepos
 }
