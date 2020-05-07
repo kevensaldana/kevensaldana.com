@@ -47,7 +47,7 @@ const Home = ({ posts }) => {
             <div className="mb-8">
               <Presentation />
             </div>
-            <div className="my-8 hidden lg:block">
+            <div className="my-2 hidden lg:block">
               <ListSections />
             </div>
             <div className="lg:pt-4 mb-10">
