@@ -45,7 +45,7 @@ const Presentation = () => {
       <div className="overflow-hidden relative">
         <p
           ref={sectionPresentationSubTitle}
-          className="section-index__subtitle text-on_background lg:text-lg mb-1 font-light opacity-0 max-w-lg"
+          className="section-index__subtitle lg:text-lg mb-1 font-light opacity-0 max-w-lg"
         >
           {config.description}
         </p>

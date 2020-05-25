@@ -43,7 +43,7 @@ const ItemLatestWork = ({ img, title, description }) => {
       <div className="overflow-hidden relative">
         <div ref={contentHideRef} className="opacity-0">
           <h2 className="relative md:hidden">{title}</h2>
-          <p className="mb-6 text-gray-500 md:hidden">{description}</p>
+          <p className="mb-6 text-content-secondary md:hidden">{description}</p>
         </div>
       </div>
       <div ref={element} className="relative">

@@ -29,6 +29,7 @@
     "gatsby-transformer-json": "^2.2.25",
     "gatsby-transformer-sharp": "^2.3.1",
     "gsap": "^3.0.1",
+    "k-design-system": "0.0.7",
     "mdx-utils": "^0.2.0",
     "node-sass": "^4.13.0",
     "prism-react-renderer": "^1.0.2",
@@ -66,7 +67,8 @@
     "postcss-nested": "^4.2.1",
     "postcss-nested-ancestors": "^2.0.0",
     "prettier": "^1.19.1",
-    "pretty-quick": "^2.0.1"
+    "pretty-quick": "^2.0.1",
+    "yalc": "^1.0.0-pre.35"
   },
   "keywords": [
     "gatsby"
@@ -74,6 +76,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
+    "lib": "yalc add k-design-system",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",

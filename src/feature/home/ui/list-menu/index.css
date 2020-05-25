@@ -6,7 +6,7 @@
     &.active {
       .line {
         width: 40px;
-        background: var(--primary);
+        background: var(--primary-color);
       }
     }
     .line {

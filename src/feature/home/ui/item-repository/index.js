@@ -11,7 +11,7 @@ const ItemRepository = ({
   urlRepository,
 }) => {
   return (
-    <div className="item-repository bg-surface card-padding mb-3 shadow ">
+    <div className="item-repository bg-z-1 card-padding mb-3 shadow ">
       <p className="uppercase text-xs">{language}</p>
       <a
         href={urlRepository}

@@ -1,9 +1,13 @@
-/**
- * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/ssr-apis/
- */
 const React = require("react")
+const {
+  applyPolyfills,
+  defineCustomElements,
+} = require("k-design-system/loader")
+
+applyPolyfills().then(() => {
+  defineCustomElements()
+})
+
 const MainLayout = require("./src/layouts/main").default
 const ArticleLayout = require("./src/layouts/article").default
 const DefaultLayout = require("./src/layouts/default").default

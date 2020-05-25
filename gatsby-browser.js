@@ -1,5 +1,14 @@
+const {
+  applyPolyfills,
+  defineCustomElements,
+} = require("k-design-system/loader")
+require("k-design-system/dist/design-system/design-system.css")
 require("./src/styles/global.css")
 require("prism-themes/themes/prism-dracula.css")
+
+applyPolyfills().then(() => {
+  defineCustomElements()
+})
 
 const React = require("react")
 const MainLayout = require("./src/layouts/main").default

@@ -5,7 +5,7 @@ import PropTypes from "prop-types"
 
 const ItemPost = ({ detail, img, title, tags, timeToRead, url }) => {
   return (
-    <div className="item-post relative bg-surface card-padding ">
+    <div className="item-post relative bg-z-1 card-padding ">
       <p className={" text-xs"}>
         {detail}, {timeToRead} min read
       </p>
